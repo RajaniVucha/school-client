@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import SchoolContext from "./SchoolContext";
 
 const EditTeacher = (props) => {
   const { teacherId } = useParams();
   //console.log(teacherId);
-  const [newTeacher, setNewTeacher] = useState({});
   const { getTeacherById, teacher, setTeacher } = useContext(SchoolContext);
   //console.log(teacher);
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ const EditTeacher = (props) => {
     // alert(e.target.value);
     const { name, value } = e.target;
     setTeacher({
-      ...newTeacher,
+      ...teacher,
       [name]: value,
     });
     //console.log(teacher);

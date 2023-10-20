@@ -5,7 +5,7 @@ import SchoolContext from "./SchoolContext";
 const EditStudent = (props) => {
   const { studentId } = useParams();
   //console.log(studentId);
-  const [newStudent, setNewStudent] = useState({});
+  //const [newStudent, setNewStudent] = useState({});
   const { getStudentById, studentData } = useContext(SchoolContext);
   const [student, setStudent] = useState({
     name: studentData[0]?.name,
@@ -31,7 +31,7 @@ const EditStudent = (props) => {
     // alert(e.target.value);
     const { name, value } = e.target;
     setStudent({
-      ...newStudent,
+      ...student,
       [name]: value,
     });
     console.log(student);
