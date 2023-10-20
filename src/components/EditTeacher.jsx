@@ -76,7 +76,7 @@ const EditTeacher = (props) => {
     if (validateForm()) {
       try {
         const response = await fetch(
-          `https://school-server-l5xv.onrender.com/teachers/${teacherId}`,
+          `http://localhost:3000/teachers/${teacherId}`,
           {
             method: "PUT",
             headers: {

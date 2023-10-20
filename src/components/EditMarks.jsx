@@ -27,10 +27,10 @@ const EditMarks = (props) => {
     //get students by grade
     const getReportByStudent = async (studentId) => {
       // console.log(reports);
-      //console.log(`https://school-server-l5xv.onrender.com/reports/?id=${studentId}`);
+      //console.log(`http://localhost:3000/reports/?id=${studentId}`);
       try {
         const response = await fetch(
-          `https://school-server-l5xv.onrender.com/reports/?id=${studentId}`,
+          `http://localhost:3000/reports/?id=${studentId}`,
           {
             method: "GET",
             headers: {
@@ -74,7 +74,7 @@ const EditMarks = (props) => {
     console.log(newReport);
     try {
       const response = await fetch(
-        `https://school-server-l5xv.onrender.com/reports/${studentId}`,
+        `http://localhost:3000/reports/${studentId}`,
         {
           method: "PUT",
           headers: {

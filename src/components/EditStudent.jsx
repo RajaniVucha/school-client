@@ -41,10 +41,10 @@ const EditStudent = (props) => {
     e.preventDefault();
     // console.log(student);
 
-    //// console.log(`https://school-server-l5xv.onrender.com/students/${studentId}`);
+    //// console.log(`http://localhost:3000/students/${studentId}`);
     try {
       const response = await fetch(
-        `https://school-server-l5xv.onrender.com/students/${studentId}`,
+        `http://localhost:3000/students/${studentId}`,
         {
           method: "PUT",
           headers: {

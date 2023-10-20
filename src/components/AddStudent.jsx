@@ -72,7 +72,7 @@ const AddStudent = () => {
 
       console.log(student);
       // Make a POST request to your API endpoint
-      fetch("https://school-server-l5xv.onrender.com/students", {
+      fetch("http://localhost:3000/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
