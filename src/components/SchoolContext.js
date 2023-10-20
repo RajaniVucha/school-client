@@ -95,6 +95,7 @@ export const SchoolProvider = ({ children }) => {
       // Make a POST request to your API endpoint
       fetch("http://localhost:3000/login", {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
