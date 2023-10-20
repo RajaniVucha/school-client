@@ -93,9 +93,8 @@ export const SchoolProvider = ({ children }) => {
     if (validateLoginForm()) {
       console.log(user);
       // Make a POST request to your API endpoint
-      fetch("http://localhost:3000/login", {
+      fetch("https://school-server-l5xv.onrender.com/login", {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -147,7 +146,7 @@ export const SchoolProvider = ({ children }) => {
   const getStudentsByClass = async (grade) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/students/?grade=${grade}`,
+        `https://school-server-l5xv.onrender.com/students/?grade=${grade}`,
         {
           method: "GET",
           headers: {
@@ -170,10 +169,10 @@ export const SchoolProvider = ({ children }) => {
   //fetch student by Id details
   const getStudentById = async (studentId) => {
     //console.log(studentId);
-    // console.log(`http://localhost:3000/students/?_id=${studentId}`);
+    // console.log(`https://school-server-l5xv.onrender.com/students/?_id=${studentId}`);
     try {
       const response = await fetch(
-        `http://localhost:3000/students/?_id=${studentId}`,
+        `https://school-server-l5xv.onrender.com/students/?_id=${studentId}`,
         {
           method: "GET",
           headers: {
@@ -197,10 +196,10 @@ export const SchoolProvider = ({ children }) => {
   //fetch student by Id details
   const getTeacherById = async (teacherId) => {
     //console.log(studentId);
-    //console.log(`http://localhost:3000/teachers/?_id=${teacherId}`);
+    //console.log(`https://school-server-l5xv.onrender.com/teachers/?_id=${teacherId}`);
     try {
       const response = await fetch(
-        `http://localhost:3000/teachers/?_id=${teacherId}`,
+        `https://school-server-l5xv.onrender.com/teachers/?_id=${teacherId}`,
         {
           method: "GET",
           headers: {
@@ -224,7 +223,7 @@ export const SchoolProvider = ({ children }) => {
   //fetch teachers data
   const fetchTeachersData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/teachers/");
+      const response = await fetch("https://school-server-l5xv.onrender.com/teachers/");
       // console.log(response);
       const data = await response.json();
       setTeacherData(data);
